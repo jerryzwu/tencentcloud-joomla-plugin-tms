@@ -62,6 +62,7 @@ class TencentcloudTmsAction
     private $plugin_type = 'tms';
     private $secret_id;
     private $secret_key;
+    private $whitelist;
 
 
     /**
@@ -83,6 +84,7 @@ class TencentcloudTmsAction
         $tms_options = !empty($tms_options) ? $tms_options : array();
         $this->secret_id = isset($tms_options['secret_id']) ? $tms_options['secret_id'] : '';
         $this->secret_key = isset($tms_options['secret_key']) ? $tms_options['secret_key'] : '';
+        $this->whitelist = isset($tms_options['whitelist']) ? explode(';', $tms_options['whitelist']) : array();
         return true;
     }
 
@@ -199,6 +201,10 @@ class TencentcloudTmsAction
                 $article->setError(JText::_('PLG_CONTENT_TENCENTCLOUD_TMS_CMSCLIENT_ERROR'));
                 return false;
             }
+            if (isset($this->whitelist) && is_array($this->whitelist) && !empty($this->whitelist)) {
+                $text = str_replace($this->whitelist, '', $text);
+            }
+
             $req = new TextModerationRequest();
             $params['Content'] = base64_encode($text);
             $req->fromJsonString(json_encode($params, JSON_UNESCAPED_UNICODE));

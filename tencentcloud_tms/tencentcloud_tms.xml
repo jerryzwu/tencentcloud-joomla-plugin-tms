@@ -48,6 +48,22 @@
                         class="input-xxlarge"
                 />
             </fieldset>
+            <fieldset
+                    name="whitelist"
+                    label="PLG_CONTENT_TENCENTCLOUD_WHITELIST_LABEL"
+            >
+                <field
+                        name="whitelist"
+                        type="textarea"
+                        label="PLG_CONTENT_TENCENTCLOUD_WHITELIST_TEXT_LABEL"
+                        description="PLG_CONTENT_TENCENTCLOUD_WHITELIST_NOTE_DESC"
+                        hint="PLG_CONTENT_TENCENTCLOUD_WHITELIST_NOTE_DEFAULT"
+                        class="span6"
+                        rows="7"
+                        cols="10"
+                        filter="html"
+                />
+            </fieldset>
         </fields>
     </config>
     <updateservers>
