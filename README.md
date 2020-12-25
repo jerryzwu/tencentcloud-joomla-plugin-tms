@@ -14,7 +14,7 @@
 | ---------- | ------------------------------------------------------------ |
 | 中文名称   | 腾讯云文本内容安全（TMS）插件                                  |
 | 英文名称   | tencentcloud-tms                                         |
-| 最新版本   | v1.0.0 (2020.11.12)                                          |
+| 最新版本   | v1.0.1 (2020.12.22)                                          |
 | 适用平台   | [Joomla](https://joomla.org/)                          |
 | 适用产品   | [腾讯云文本内容安全（TMS）](https://cloud.tencent.com/product/tms) |
 | GitHub项目 | [tencentcloud-joomla-plugin-tms](https://github.com/Tencent-Cloud-Plugins/tencentcloud-joomla-plugin-tms) |
@@ -72,7 +72,7 @@
 
 
 ## 6.GitHub版本迭代记录
-### 2020.11.12 tencentcloud-joomla-plugin-tms v1.0.1
+### 2020.12.22 tencentcloud-joomla-plugin-tms v1.0.1
 - 新增敏感词白名单
 
 ### 2020.11.12 tencentcloud-joomla-plugin-tms v1.0.0
